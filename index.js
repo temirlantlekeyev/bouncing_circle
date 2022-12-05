@@ -1,4 +1,4 @@
-const box = document.getElementById("box")
+const circle = document.getElementById("circle")
 
       let x = 1
       let y = 1
@@ -6,27 +6,27 @@ const box = document.getElementById("box")
       let ySpeed = 10
 
         function load() {
-        box.style.left = x + "px" 
-        box.style.top = y + "px"
+        circle.style.left = x + "px" 
+        circle.style.top = y + "px"
        }
 
       setInterval(()=> {
 
-        if (x + box.clientWidth>= window.innerWidth) {
+        if (x + circle.clientWidth>= window.innerWidth) {
             xSpeed = - xSpeed
-            box.style.backgroundColor = "blue"  
+            circle.style.backgroundColor = "blue"  
         }
-        if ( y + box.clientHeight >= window.innerHeight) {
+        if ( y + circle.clientHeight >= window.innerHeight) {
             ySpeed = -ySpeed
-            box.style.backgroundColor = "green"
+            circle.style.backgroundColor = "green"
         }
         if (x <= 0) {
             xSpeed = - xSpeed
-            box.style.backgroundColor = "purple"
+            circle.style.backgroundColor = "purple"
         }
         if (y <= 0) {
             ySpeed = - ySpeed
-            box.style.backgroundColor = "yellow"
+            circle.style.backgroundColor = "yellow"
         }
 
         x += xSpeed
@@ -36,16 +36,3 @@ const box = document.getElementById("box")
       },50)
 
  
-
-    //    setInterval(()=> {
-        
-    //     if(xPosition >= window.innerWidth || x <= 0) {
-    //         xSpeed = - xSpeed
-    //     }
-    //     if (yPosition >= window.innerHeight || y <= 0) {
-    //         ySpeed = -ySpeed
-    //     }
-    //     xPosition += xSpeed
-    //     yPosition +=ySpeed
-    //     load()
-    //    }, 300)
